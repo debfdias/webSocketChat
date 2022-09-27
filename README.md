@@ -5,9 +5,8 @@ A real time chat application using socket.io.
 This project was made using the following technologies:
 
 * [TypeScript](https://www.typescriptlang.org/)  
-* [Socket.io](https://www.typescriptlang.org/)  
-* [CSS](https://nodejs.org/en/)      
-* [Mongo](https://www.prisma.io/)
+* [Socket.io](https://socket.io/)
+* [Mongo](https://www.mongodb.com/)
 
 
 ## :computer: How to run
