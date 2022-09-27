@@ -1,8 +1,6 @@
 const socket = io("http://localhost:3333");
 let idChatRoom = "";
 
-
-
 function onLoad() {
   const urlParams = new URLSearchParams(window.location.search);
   const name = urlParams.get("name");
@@ -64,7 +62,7 @@ function addMessage(data) {
   const divMessageUser = document.getElementById("message_user");
 
   divMessageUser.innerHTML += ` 
-  <span class="user_name user_name_date">
+    <span class="user_name user_name_date">
       <img
         class="img_user"
         src=${data.user.avatar}
@@ -121,14 +119,14 @@ document.getElementById("users_list").addEventListener("click", (e) => {
     socket.emit("start_chat", { idUser }, (response) => {
       idChatRoom = response.room.idChatRoom;
 
-      response.messages.forEach((message) => {
+      response.messages.forEach(message => {
         const data = {
           message,
-          user: message.to,
-        };
+          user: message.to
+        }
 
         addMessage(data);
-      });
+      })
     });
   }
 });

@@ -2,7 +2,7 @@ import { injectable } from "tsyringe";
 import { User } from "../schemas/User";
 
 @injectable()
-class GetAllUsersService {
+class GetAllUsers {
   async execute() {
     const users = await User.find();
 
@@ -10,4 +10,4 @@ class GetAllUsersService {
   }
 }
 
-export { GetAllUsersService };
+export { GetAllUsers };

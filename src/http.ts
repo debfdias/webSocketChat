@@ -8,7 +8,7 @@ import mongoose from "mongoose";
 const app = express();
 const server = createServer(app);
 
-mongoose.connect("mongodb://localhost/socket").then(() => { console.log('mongo connected!')});
+mongoose.connect("mongodb://localhost/socket").then(() => { console.log('MongoDB connected!')});
 
 app.use(express.static(path.join(__dirname, "..", "public")));
 
